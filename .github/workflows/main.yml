@@ -7,13 +7,13 @@ on:
 
 jobs:
   build:
-    runs-on: windows
-
-  steps:
-    - uses: actions/checkout@v3
+    runs-on: ubuntu-latest
     
-    - name: Log in
-      uses: azure/login@v1
-      with:
-        creds: ${{ secrets.AZURE_CREDENTIALS}}
+    steps:
+      - uses: actions/checkout@v3
+    
+      - name: Log in
+        uses: azure/login@v1
+        with:
+          creds: ${{ secrets.AZURE_CREDENTIALS}}
   
